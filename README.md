@@ -11,10 +11,16 @@ Tools:
 Instructions:
 -----------------
 
-`npm install -g webpack`
-`npm install`
-`webpack`
+```
+# install dependencies
+npm install -g webpack
+npm install
 
-Open index.html
+# build the client files
+webpack
 
-and the usual stuff.
+# start a server to host
+node server.js
+```
+
+Open http://localhost:9000/index.html
