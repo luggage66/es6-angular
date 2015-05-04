@@ -1,15 +1,13 @@
 import angular from 'angular';
-import unused1 from 'angular-route';
-import unused2 from 'angular-resource';
-
-console.log(unused1);
 
 import WeatherFactory from './factories/weather';
 import WeatherController from './controllers/weatherController';
 
-console.log(angular.version);
+// require('angular-resource') loads angular-resource as 'ngResource' and return returns the string 'ngResource'
+// so you can use it right in the dependency list below.
+// same with angular-route
 
-var app = angular.module('weatherApp', ['ngResource', require('ngRoute')]);
+var app = angular.module('weatherApp', [require('angular-resource'), require('angular-route')]);
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider.
         when('/', {
