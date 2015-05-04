@@ -1,15 +1,17 @@
 import angular from 'angular';
 import unused1 from 'angular-route';
-import unused2 from 'angular-resource/angular-resource';
+import unused2 from 'angular-resource';
 
-import WeatherFactory from 'factories/weather';
-import WeatherController from 'controllers/weatherController';
+import WeatherFactory from './factories/weather';
+import WeatherController from './controllers/weatherController';
 
-var app = angular.module('weatherApp', ['ngResource', 'ngRoute']);
+console.log(angular.version);
+
+var app = angular.module('ng', ['ngResource', 'ngRoute']);
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider.
         when('/', {
-            templateUrl: 'views/weather.html',
+            templateUrl: require('./views/weather.html'),
             controller: 'WeatherController'
         });
 }]);

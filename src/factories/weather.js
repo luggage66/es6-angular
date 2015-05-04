@@ -19,6 +19,6 @@ class WeatherFactory {
 	}
 }
 
-WeatherFactory.$inject = [$resource];
+WeatherFactory.$inject = ['$resource'];
 
 export default WeatherFactory;

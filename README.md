@@ -11,6 +11,10 @@ Tools:
 Instructions:
 -----------------
 
-`npm install -g bower gulp babel`
+`npm install -g webpack`
+`npm install`
+`webpack`
+
+Open index.html
 
 and the usual stuff.
