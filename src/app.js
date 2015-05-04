@@ -1,3 +1,7 @@
+import angular from 'angular';
+import unused1 from 'angular-route';
+import unused2 from 'angular-resource/angular-resource';
+
 import WeatherFactory from 'factories/weather';
 import WeatherController from 'controllers/weatherController';
 
