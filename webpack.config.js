@@ -16,7 +16,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
-            , { test: /\.html$/, loader: "ngtemplate?module=weatherApp&relativeTo=" + (path.resolve(__dirname, './src')) + "/!html" }
+            //, { test: /\.html$/, loader: "ngtemplate?module=weatherApp&relativeTo=" + (path.resolve(__dirname, './src')) + "/!html" }
             //{ test: /\.css$/, loader: "style!css" },
             //{ test: /\.less$/, loader: 'style?-singleton!css!less'},
             //{ test: /\.png$/, loader: 'file'},
@@ -26,6 +26,13 @@ module.exports = {
     plugins: [
         new webpack.optimize.DedupePlugin()
     ],
+
+    // http://stackoverflow.com/questions/28647147/how-can-i-injector-angular-module-in-webpack
     resolve: {
+        alias: {
+            'ngRoute': 'angular-route',
+            'ngResource': 'angular-resource'
+        }
+
     }
 };
